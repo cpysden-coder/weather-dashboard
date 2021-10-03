@@ -1,5 +1,6 @@
 body {
-    background-image: url("../images/mt-rainier.png");
+    /* background-image: url("../images/mt-rainier.png"); */
+    background-color:#87ceeb;
 }
 
 .myJumbotron {
