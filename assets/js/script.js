@@ -46,7 +46,7 @@ function searchURL(city) {
         console.log(`humidity: ${humidity}`);
         var icon = data.weather[0].icon;
         console.log(`weather icon: ${icon}`);
-        iconimg = "http://openweathermap.org/img/w/"+icon+".png"
+        iconimg = "https://openweathermap.org/img/w/"+icon+".png"
         $('#main-icon').attr('src', iconimg);
         console.log(` this is the icon url "${iconimg}"`);
         var descr = data.weather[0].main;
@@ -90,7 +90,7 @@ function forecast() {
         $('#fwind').html(`Wind Speed ${dayW}`)
         var dayI = data.daily[1].weather[0].icon;
         console.log(dayI);
-        ficonimg = "http://openweathermap.org/img/w/"+dayI+".png";
+        ficonimg = "https://openweathermap.org/img/w/"+dayI+".png";
         console.log(ficonimg);
         $('#ficon').attr('src', ficonimg);
         
@@ -107,10 +107,6 @@ function forecast() {
     });
 }
 
-function init() {
-    location.reload
-
-}
 
 // function print() {
     
