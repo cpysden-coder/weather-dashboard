@@ -5,3 +5,7 @@ body {
 .myJumbotron {
     background-color: #87ceeb;
  }
+
+ textarea {
+     max-width: 80%;
+ }
