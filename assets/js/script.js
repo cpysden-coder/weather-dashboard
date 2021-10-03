@@ -24,7 +24,7 @@ var cityTest = $('#cityToSearch').val();
 console.log(`city = ${cityTest}`)
 
 function searchURL(city) {
-    queryURL = ("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + apiKey);
+    queryURL = ("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial" + "&appid=" + apiKey);
     console.log(queryURL);
     //create a ref element <button> under search bar and update with href for future ref.
     $('#appendHere').after(`<a href=${queryURL} target="_blank" class="fore-cast">${city}</a>`)
@@ -39,10 +39,10 @@ function searchURL(city) {
     .then(function(data) {
         console.log(data.main["temp"]);
         var temp = data.main["temp"];
-        $('#temp').html(temp);
-        console.log(`temp: ${temp}`);
+        $('#temp').html(`temp: ${temp}`);
+        console.log(`Temp: ${temp}`);
         var humidity = data.main["humidity"];
-        $('humidity').html(humidity);
+        $('humidity').html(`Humidity: ${humidity}`);
         console.log(`humidity: ${humidity}`);
         var icon = data.weather[0].icon;
         console.log(`weather icon: ${icon}`);
